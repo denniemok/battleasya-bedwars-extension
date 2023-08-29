@@ -1,4 +1,4 @@
-<br><br>
+<br>
 <h3 align="center">BedWars Extension: BattleAsya Edition</h3>
 <p align="center">A simple extension to BedWars.</p>
 
@@ -15,11 +15,15 @@
 <hr>
 
 ### Introduction
-A simple and lightweight BedWars extension custom-made for BattleAsya. <br><br>
+A simple and lightweight BedWars extension custom-made for BattleAsya. <br>
+
+<hr>
 
 ### Components
 - Experience Booster Extension for [AlonsoLevels](https://www.spigotmc.org/resources/83380/)
-- In-Chat Statistics Extension for [BedWars Minigame](https://www.spigotmc.org/resources/51340/) <br><br>
+- In-Chat Statistics Extension for [BedWars Minigame](https://www.spigotmc.org/resources/51340/) <br>
+
+<hr>
 
 ### Runtime Requirements
 - Java 8 or above
@@ -27,16 +31,15 @@ A simple and lightweight BedWars extension custom-made for BattleAsya. <br><br>
 - Permission plugin, preferably LuckPerms or PermissionsEX
 - [AlonsoLevels](https://www.spigotmc.org/resources/83380/) 2.2.1-BETA or above
 - [BedWars Minigame](https://www.spigotmc.org/resources/51340/) 1.16-Legacy or above
-- MySQL (com.mysql.jdbc) drivers <br><br>
+- MySQL (com.mysql.jdbc) drivers <br>
 
 <hr>
 
 ### Build Dependencies
 - Java 8
 - Spigot API 1.8.8 R0.1
-- AlonsoLevels 2.2.1-BETA (Free) <br><br>
+- AlonsoLevels 2.2.1-BETA (Free) <br>
 
 <hr>
 
-### License
-To be confirmed.
+

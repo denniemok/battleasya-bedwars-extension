@@ -33,7 +33,7 @@ public class aBooster implements CommandExecutor {
                     return true;
                 }
 
-                General.sendMessage(sender, "&8(&4&l!&8) &6Changed modifier to " + args[1] + ".");
+                General.sendMessage(sender, "&aChanged modifier to " + args[1] + ".");
                 return true;
 
             }

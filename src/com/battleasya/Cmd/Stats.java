@@ -110,14 +110,11 @@ public class Stats implements CommandExecutor {
     public void printHelp(CommandSender sender) {
         General.sendMessage(sender,"");
         General.sendMessage(sender, "&8[&3Stats&8] &7Plugin made by &aKaytlynJay&7.");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/stats");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/stats <name> &e(Royale)");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/rankings");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/rankings <name> &e(Royale)");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/leaderboard");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/leaderboard <type>");
-        General.sendMessage(sender, "&8[&3Stats&8] &c<type>: wins, loses, kills, deaths");
-        General.sendMessage(sender, "&8[&3Stats&8] &c<type>: beds-destroyed, final-kills, final-deaths");
+        General.sendMessage(sender, "&8[&3Stats&8] &c/stats [name]");
+        General.sendMessage(sender, "&8[&3Stats&8] &c/rankings [name]");
+        General.sendMessage(sender, "&8[&3Stats&8] &c/leaderboard [type]");
+        General.sendMessage(sender, "&8[&3Stats&8] &c[type]: wins, loses, kills, deaths");
+        General.sendMessage(sender, "&8[&3Stats&8] &c[type]: beds-destroyed, final-kills, final-deaths");
         General.sendMessage(sender,"");
     }
 

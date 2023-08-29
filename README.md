@@ -12,14 +12,16 @@
     <img src="https://img.shields.io/badge/Version-1.0.2-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-TBC-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p><br>
 
-## Introduction
+<hr>
+
+### Introduction
 A simple and lightweight BedWars extension custom-made for BattleAsya. <br><br>
 
-## Components
+### Components
 - Experience Booster Extension for [AlonsoLevels](https://www.spigotmc.org/resources/83380/)
 - In-Chat Statistics Extension for [BedWars Minigame](https://www.spigotmc.org/resources/51340/) <br><br>
 
-## Runtime Requirements
+### Runtime Requirements
 - Java 8 or above
 - Spigot 1.8 or above, or equivalent forks
 - Permission plugin, preferably LuckPerms or PermissionsEX
@@ -27,10 +29,14 @@ A simple and lightweight BedWars extension custom-made for BattleAsya. <br><br>
 - [BedWars Minigame](https://www.spigotmc.org/resources/51340/) 1.16-Legacy or above
 - MySQL (com.mysql.jdbc) drivers <br><br>
 
-## Build Dependencies
+<hr>
+
+### Build Dependencies
 - Java 8
 - Spigot API 1.8.8 R0.1
 - AlonsoLevels 2.2.1-BETA (Free) <br><br>
 
-## License
+<hr>
+
+### License
 To be confirmed.

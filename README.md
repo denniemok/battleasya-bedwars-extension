@@ -15,7 +15,7 @@
 <hr>
 
 ### Introduction
-A simple and lightweight BedWars extension custom-made for BattleAsya. <br>
+This simple extension introduces several feature enhancement to the 2 BedWars-related plugins (i.e., BedWars Minigame, AlonosoLevels) installed on BattleAsya. Since it was initially made for exclusive use on BattleAsya, most of the messages and parameters were hard-coded.<br>
 
 <hr>
 
@@ -30,7 +30,7 @@ A simple and lightweight BedWars extension custom-made for BattleAsya. <br>
 - Spigot 1.8 or above, or equivalent forks
 - Permission plugin, preferably LuckPerms or PermissionsEX
 - [AlonsoLevels](https://www.spigotmc.org/resources/83380/) 2.2.1-BETA or above
-- [BedWars Minigame](https://www.spigotmc.org/resources/51340/) 1.16-Legacy or above
+- [BedWars Minigame](https://www.spigotmc.org/resources/51340/) 1.16-Legacy or above, with MySQL option enabled in config.yml
 - MySQL (com.mysql.jdbc) drivers <br>
 
 <hr>

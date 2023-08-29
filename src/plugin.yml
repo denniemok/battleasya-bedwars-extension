@@ -1,0 +1,29 @@
+name: BW-Utility
+main: com.battleasya.BWUtility
+version: 1.0.2
+author: Dennie
+website: http://battleasya.com
+description: BattleAsya BedWars Utility
+depend: [AlonsoLevels]
+commands:
+  bwstats:
+    description: Check statistics.
+  booster:
+    description: Activate booster or check booster status.
+  abooster:
+    description: Manage boosters.
+  bwureload:
+    description: Reload config.
+permissions:
+  booster.use:
+    description: Ability to activate a booster.
+    default: op
+  booster.admin:
+    description: Ability to manage boosters.
+    default: op
+  bwutility.reload:
+    description: Ability to reload config.
+    default: op
+  bwstats.stats.others:
+    description: Ability to view others stats.
+    default: op

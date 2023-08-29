@@ -1,0 +1,6 @@
+host: "0.0.0.0"
+port: "3306"
+database: "bedwars"
+username: "username"
+password: "password"
+flags: "?autoReconnect=true&verifyServerCertificate=false&useSSL=false"

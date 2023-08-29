@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.2-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-TBC-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+    <img src="https://img.shields.io/badge/Version-1.0.2-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p><br>
 
 <hr>
@@ -42,4 +42,4 @@ A simple and lightweight BedWars extension custom-made for BattleAsya. <br>
 
 <hr>
 
-
+This project is released under the [MIT License](https://opensource.org/license/mit/).

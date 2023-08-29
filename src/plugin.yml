@@ -4,7 +4,7 @@ version: 1.0.2
 author: Dennie
 website: http://battleasya.com
 description: BattleAsya BedWars Extension
-depend: [AlonsoLevels]
+depend: [AlonsoLevels, BedWars]
 commands:
   bwstats:
     description: Check statistics.

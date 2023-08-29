@@ -1,6 +1,6 @@
 package com.battleasya.Cmd;
 
-import com.battleasya.Util.General;
+import com.battleasya.Hdlr.Util;
 import com.battleasya.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,7 +17,7 @@ public class Reload implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
         if(!sender.hasPermission("bwutility.reload")) {
-            General.sendMessage(sender, "&8(&4&l!&8) &6Unknown Command.");
+            Util.sendMessage(sender, "&8(&4&l!&8) &6Unknown Command.");
             return true;
         }
 
@@ -27,7 +27,7 @@ public class Reload implements CommandExecutor {
             return true;
         }
 
-        General.sendMessage(sender, "&cSyntax: /bwureload");
+        Util.sendMessage(sender, "&cSyntax: /bwureload");
         return true;
 
     }

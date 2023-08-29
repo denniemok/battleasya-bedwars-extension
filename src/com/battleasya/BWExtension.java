@@ -6,7 +6,7 @@ import com.battleasya.Cmd.aBooster;
 import com.battleasya.Cmd.Booster;
 import com.battleasya.Cmd.Stats;
 import com.battleasya.Hdlr.Event;
-import com.battleasya.Util.Config;
+import com.battleasya.Hdlr.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;

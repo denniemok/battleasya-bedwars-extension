@@ -1,4 +1,4 @@
-package com.battleasya.Util;
+package com.battleasya.Hdlr;
 
 import com.battleasya.BWExtension;
 import org.bukkit.configuration.file.FileConfiguration;

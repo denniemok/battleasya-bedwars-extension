@@ -1,6 +1,6 @@
-package com.battleasya.Ds;
+package com.battleasya.datasource;
 
-import com.battleasya.Hdlr.Util;
+import com.battleasya.handler.Util;
 import com.battleasya.BWExtension;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;

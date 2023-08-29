@@ -1,4 +1,4 @@
-package com.battleasya.Hdlr;
+package com.battleasya.handler;
 
 import com.alonsoaliaga.alonsolevels.api.AlonsoLevelsAPI;
 import com.alonsoaliaga.alonsolevels.api.events.ExperienceChangeEvent;

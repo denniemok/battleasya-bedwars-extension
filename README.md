@@ -27,7 +27,7 @@ BattleAsya had been using this extension on all its BedWars instances ever since
 
 <hr>
 
-### Features
+### Main Features
 - Fetch raw statistics from BedWars's remote database 
 - Compute extra statistics and perform data category grouping
 - Compute the individual rankings for each data category (intensive)

@@ -22,7 +22,7 @@ A simple and lightweight BedWars extension custom-made for BattleAsya. <br>
 ## Runtime Requirements
 - Java 8 or above
 - Spigot 1.8 or above, or equivalent forks
-- PermissionEx 1.23.4, or equivalent permission plugin
+- Permission plugin, preferably LuckPerms or PermissionsEX
 - [AlonsoLevels](https://www.spigotmc.org/resources/83380/) 2.2.1-BETA or above
 - [BedWars Minigame](https://www.spigotmc.org/resources/51340/) 1.16-Legacy or above
 - MySQL (com.mysql.jdbc) drivers

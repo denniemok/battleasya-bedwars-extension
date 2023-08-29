@@ -1,6 +1,6 @@
 <br>
 <h3 align="center">BattleAsya BedWars Extension</h3>
-<p align="center">A simple extension to <a href="https://www.spigotmc.org/resources/51340/">BedWars Minigame</a>.</p>
+<p align="center">A hybrid extension to <a href="https://www.spigotmc.org/resources/51340/">BedWars Minigame</a> and <a href="https://www.spigotmc.org/resources/83380/">AlonsoLevels</a>.</p>
 
 <p align="center">
     <a href="https://github.com/denniemok/BA-BedWars-Extension/releases">Latest Release</a> •

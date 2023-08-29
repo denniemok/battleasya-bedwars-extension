@@ -1,6 +1,6 @@
 package com.battleasya.Cmd;
 
-import com.battleasya.Util.General;
+import com.battleasya.Hdlr.Util;
 import com.battleasya.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,11 +29,11 @@ public class Booster implements CommandExecutor {
 
                 if (plugin.boosterInAction) {
                     long secondsLeft = 3600 - ( System.currentTimeMillis() / 1000 - plugin.timeStamp / 1000 );
-                    General.sendMessage(sender, "&8[&3Booster&8] &aSponsor: " + plugin.activatedBy);
-                    General.sendMessage(sender, "&8[&3Booster&8] &aDuration: " + secondsLeft + " seconds left");
-                    General.sendMessage(sender, "&8[&3Booster&8] &aModifier: " + plugin.expModifier);
+                    Util.sendMessage(sender, "&8[&3Booster&8] &aSponsor: " + plugin.activatedBy);
+                    Util.sendMessage(sender, "&8[&3Booster&8] &aDuration: " + secondsLeft + " seconds left");
+                    Util.sendMessage(sender, "&8[&3Booster&8] &aModifier: " + plugin.expModifier);
                 } else {
-                    General.sendMessage(sender, "&8[&3Booster&8] &cThere is currently no active booster.");
+                    Util.sendMessage(sender, "&8[&3Booster&8] &cThere is currently no active booster.");
                 }
 
                 return true;
@@ -43,17 +43,17 @@ public class Booster implements CommandExecutor {
             if (args[0].equalsIgnoreCase("activate")) {
 
                 if(!sender.hasPermission("booster.use")) {
-                    General.sendMessage(sender, "&8[&3Booster&8] &cPurchase Royale Membership To Unlock This Feature!");
+                    Util.sendMessage(sender, "&8[&3Booster&8] &cPurchase Royale Membership To Unlock This Feature!");
                     return true;
                 }
 
                 if (plugin.consumedList.containsKey(sender.getName())) {
-                    General.sendMessage(sender, "&8[&3Booster&8] &cYou can only do so once per day!");
+                    Util.sendMessage(sender, "&8[&3Booster&8] &cYou can only do so once per day!");
                     return true;
                 }
 
                 if (plugin.boosterInAction) {
-                    General.sendMessage(sender, "&8[&3Booster&8] &cThere is already an active booster!");
+                    Util.sendMessage(sender, "&8[&3Booster&8] &cThere is already an active booster!");
                 } else {
                     activateBooster(sender, !sender.hasPermission("booster.admin"));
                 }
@@ -70,11 +70,11 @@ public class Booster implements CommandExecutor {
     }
 
     public void printHelp(CommandSender sender) {
-        General.sendMessage(sender, "");
-        General.sendMessage(sender, "&8[&3Booster&8] &7Plugin made by &aKaytlynJay&7.");
-        General.sendMessage(sender, "&8[&3Booster&8] &c/booster status");
-        General.sendMessage(sender, "&8[&3Booster&8] &c/booster activate");
-        General.sendMessage(sender, "");
+        Util.sendMessage(sender, "");
+        Util.sendMessage(sender, "&8[&3Booster&8] &7Plugin made by &aKaytlynJay&7.");
+        Util.sendMessage(sender, "&8[&3Booster&8] &c/booster status");
+        Util.sendMessage(sender, "&8[&3Booster&8] &c/booster activate");
+        Util.sendMessage(sender, "");
     }
 
     public void activateBooster(CommandSender sender, Boolean consumption) {
@@ -93,15 +93,15 @@ public class Booster implements CommandExecutor {
             }
         }).runTaskLater(plugin, 20L * 3600);
 
-        General.sendMessage(sender, "&8[&3Booster&8] &aBooster Activated [1 Hour].");
+        Util.sendMessage(sender, "&8[&3Booster&8] &aBooster Activated [1 Hour].");
 
-        General.broadcastMessage("");
-        General.broadcastMessage("&7&m---»--*-------------------------------------*--«---");
-        General.broadcastMessage("  &6" + sender.getName() + "&e is now boosting your exp gain for an hour!");
-        General.broadcastMessage("");
-        General.broadcastMessage("  &7Purchase &fRoyale Membership &7to activate daily boosters!");
-        General.broadcastMessage("&7&m---»--*-------------------------------------*--«---");
-        General.broadcastMessage("");
+        Util.broadcastMessage("");
+        Util.broadcastMessage("&7&m---»--*-------------------------------------*--«---");
+        Util.broadcastMessage("  &6" + sender.getName() + "&e is now boosting your exp gain for an hour!");
+        Util.broadcastMessage("");
+        Util.broadcastMessage("  &7Purchase &fRoyale Membership &7to activate daily boosters!");
+        Util.broadcastMessage("&7&m---»--*-------------------------------------*--«---");
+        Util.broadcastMessage("");
 
     }
 

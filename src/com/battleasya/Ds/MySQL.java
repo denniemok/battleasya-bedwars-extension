@@ -1,6 +1,6 @@
 package com.battleasya.Ds;
 
-import com.battleasya.Util.General;
+import com.battleasya.Hdlr.Util;
 import com.battleasya.BWExtension;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -61,9 +61,9 @@ public class MySQL {
 
     public void getLeaderboardAsync(CommandSender sender, String type) {
 
-        General.sendMessage(sender,"");
-        General.sendMessage(sender,"&b&nLeaderboard (Top " + type + ")");
-        General.sendMessage(sender,"");
+        Util.sendMessage(sender,"");
+        Util.sendMessage(sender,"&b&nLeaderboard (Top " + type + ")");
+        Util.sendMessage(sender,"");
 
         (new BukkitRunnable() {
             @Override
@@ -93,11 +93,11 @@ public class MySQL {
 
                 for (int i = 0; i < 10; i++) {
                     if (leaderboard[i][0] != null) {
-                        General.sendMessage(sender, "&e" + (i + 1) + ". &f" + leaderboard[i][0] + " &7(" + leaderboard[i][1] + ")");
+                        Util.sendMessage(sender, "&e" + (i + 1) + ". &f" + leaderboard[i][0] + " &7(" + leaderboard[i][1] + ")");
                     }
                 }
 
-                General.sendMessage(sender,"");
+                Util.sendMessage(sender,"");
 
             }
         }).runTaskAsynchronously(plugin);
@@ -106,9 +106,9 @@ public class MySQL {
 
     public void getStatsAsync(CommandSender sender, String playerName) {
 
-        General.sendMessage(sender,"");
-        General.sendMessage(sender,"&b&n" + playerName + "'s Stats");
-        General.sendMessage(sender,"");
+        Util.sendMessage(sender,"");
+        Util.sendMessage(sender,"&b&n" + playerName + "'s Stats");
+        Util.sendMessage(sender,"");
 
         (new BukkitRunnable() {
             @Override
@@ -149,15 +149,15 @@ public class MySQL {
 
                 }
 
-                General.sendMessage(sender,"&eKills: &f" + stats[0]);
-                General.sendMessage(sender,"&eDeaths: &f" + stats[1]);
-                General.sendMessage(sender,"&eKDR: &f" + stats[2]);
-                General.sendMessage(sender,"&eWins: &f" + stats[3]);
-                General.sendMessage(sender,"&eLoses: &f" + stats[4]);
-                General.sendMessage(sender,"&eFinal Kills: &f" + stats[5]);
-                General.sendMessage(sender,"&eFinal Deaths: &f" + stats[6]);
-                General.sendMessage(sender,"&eBeds Destroyed: &f" + stats[7]);
-                General.sendMessage(sender,"");
+                Util.sendMessage(sender,"&eKills: &f" + stats[0]);
+                Util.sendMessage(sender,"&eDeaths: &f" + stats[1]);
+                Util.sendMessage(sender,"&eKDR: &f" + stats[2]);
+                Util.sendMessage(sender,"&eWins: &f" + stats[3]);
+                Util.sendMessage(sender,"&eLoses: &f" + stats[4]);
+                Util.sendMessage(sender,"&eFinal Kills: &f" + stats[5]);
+                Util.sendMessage(sender,"&eFinal Deaths: &f" + stats[6]);
+                Util.sendMessage(sender,"&eBeds Destroyed: &f" + stats[7]);
+                Util.sendMessage(sender,"");
 
             }
         }).runTaskAsynchronously(plugin);
@@ -166,9 +166,9 @@ public class MySQL {
 
     public void getRankingsAsync(CommandSender sender, String playerName) {
 
-        General.sendMessage(sender,"");
-        General.sendMessage(sender,"&b&n" + playerName + "'s Rankings");
-        General.sendMessage(sender,"");
+        Util.sendMessage(sender,"");
+        Util.sendMessage(sender,"&b&n" + playerName + "'s Rankings");
+        Util.sendMessage(sender,"");
 
         (new BukkitRunnable() {
             @Override
@@ -221,14 +221,14 @@ public class MySQL {
 
                 }
 
-                General.sendMessage(sender,"&eKills: &f#" + rank[0]);
-                General.sendMessage(sender,"&eDeaths: &f#" + rank[1]);
-                General.sendMessage(sender,"&eWins: &f#" + rank[2]);
-                General.sendMessage(sender,"&eLoses: &f#" + rank[3]);
-                General.sendMessage(sender,"&eFinal Kills: &f#" + rank[4]);
-                General.sendMessage(sender,"&eFinal Deaths: &f#" + rank[5]);
-                General.sendMessage(sender,"&eBeds Destroyed: &f#" + rank[6]);
-                General.sendMessage(sender,"");
+                Util.sendMessage(sender,"&eKills: &f#" + rank[0]);
+                Util.sendMessage(sender,"&eDeaths: &f#" + rank[1]);
+                Util.sendMessage(sender,"&eWins: &f#" + rank[2]);
+                Util.sendMessage(sender,"&eLoses: &f#" + rank[3]);
+                Util.sendMessage(sender,"&eFinal Kills: &f#" + rank[4]);
+                Util.sendMessage(sender,"&eFinal Deaths: &f#" + rank[5]);
+                Util.sendMessage(sender,"&eBeds Destroyed: &f#" + rank[6]);
+                Util.sendMessage(sender,"");
 
             }
         }).runTaskAsynchronously(plugin);

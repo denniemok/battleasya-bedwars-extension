@@ -1,6 +1,6 @@
 package com.battleasya.Cmd;
 
-import com.battleasya.Util.General;
+import com.battleasya.Hdlr.Util;
 import com.battleasya.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -53,7 +53,7 @@ public class Stats implements CommandExecutor {
                 if (sender.hasPermission("bwstats.stats.others")) {
                     printStats(sender, args[1]);
                 } else {
-                    General.sendMessage(sender, "&8[&3Stats&8] &cPurchase Royale Membership To Unlock This Feature!");
+                    Util.sendMessage(sender, "&8[&3Stats&8] &cPurchase Royale Membership To Unlock This Feature!");
                 }
                 return true;
             }
@@ -62,7 +62,7 @@ public class Stats implements CommandExecutor {
                 if (sender.hasPermission("bwstats.stats.others")) {
                     printRankings(sender, args[1]);
                 } else {
-                    General.sendMessage(sender, "&8[&3Stats&8] &cPurchase Royale Membership To Unlock This Feature!");
+                    Util.sendMessage(sender, "&8[&3Stats&8] &cPurchase Royale Membership To Unlock This Feature!");
                 }
                 return true;
             }
@@ -108,14 +108,14 @@ public class Stats implements CommandExecutor {
     }
 
     public void printHelp(CommandSender sender) {
-        General.sendMessage(sender,"");
-        General.sendMessage(sender, "&8[&3Stats&8] &7Plugin made by &aKaytlynJay&7.");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/stats [name]");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/rankings [name]");
-        General.sendMessage(sender, "&8[&3Stats&8] &c/leaderboard [type]");
-        General.sendMessage(sender, "&8[&3Stats&8] &c[type]: wins, loses, kills, deaths");
-        General.sendMessage(sender, "&8[&3Stats&8] &c[type]: beds-destroyed, final-kills, final-deaths");
-        General.sendMessage(sender,"");
+        Util.sendMessage(sender,"");
+        Util.sendMessage(sender, "&8[&3Stats&8] &7Plugin made by &aKaytlynJay&7.");
+        Util.sendMessage(sender, "&8[&3Stats&8] &c/stats [name]");
+        Util.sendMessage(sender, "&8[&3Stats&8] &c/rankings [name]");
+        Util.sendMessage(sender, "&8[&3Stats&8] &c/leaderboard [type]");
+        Util.sendMessage(sender, "&8[&3Stats&8] &c[type]: wins, loses, kills, deaths");
+        Util.sendMessage(sender, "&8[&3Stats&8] &c[type]: beds-destroyed, final-kills, final-deaths");
+        Util.sendMessage(sender,"");
     }
 
     public void printLeaderboard(CommandSender sender, String type) {
@@ -140,7 +140,7 @@ public class Stats implements CommandExecutor {
         if(plugin.cmdCDList.containsKey(sender.getName())) {
             long secondsLeft = ((plugin.cmdCDList.get(sender.getName())/1000)+10) - (System.currentTimeMillis()/1000);
             if (secondsLeft > 0) {
-                General.sendMessage(sender,"&8[&3Stats&8] &cCooldown: " + secondsLeft + " seconds left.");
+                Util.sendMessage(sender,"&8[&3Stats&8] &cCooldown: " + secondsLeft + " seconds left.");
                 return false;
             }
         }

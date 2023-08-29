@@ -36,7 +36,7 @@ BattleAsya had been using this extension on all its BedWars instances ever since
 - Asynchronously perform database-related tasks and print the result
 - Intercept AlonsoLevels experience change event
 - Compute the new experience gain with respect to the global modifier
-- Apply the changes in experience with avoidance to duplication
+- Apply the changes in experience with avoidance to duplication <br>
 
 <hr>
 

@@ -15,9 +15,9 @@
 <hr>
 
 ### Introduction
-This simple extension introduces several EULA-friendly enhancement to the 2 installed plugins (i.e., BedWars Minigame, AlonosoLevels) on BattleAsya. Since the extension was initially made for exclusive use on BattleAsya, most of the messages and parameters were hard-coded (i.e., non-configurable).<p>
+This simple extension introduces several EULA-friendly enhancements to the 2 installed plugins (i.e., BedWars Minigame, and AlonosoLevels) on BattleAsya. Since the extension was initially made for exclusive use on BattleAsya, most of the messages and parameters were hard-coded (i.e., non-configurable).<p>
 
-BattleAsya had been using this extension on all its BedWars instances ever since 2021. Until today, the functions it offers still makes up a large part of BattleAsya's VIP benefits. <p>
+BattleAsya has been using this extension on all its BedWars instances ever since 2021. Until today, the functions it offers still constitute  a large part of BattleAsya's VIP benefits. <p>
 
 <hr>
 
@@ -32,7 +32,7 @@ BattleAsya had been using this extension on all its BedWars instances ever since
 - Compute extra statistics and perform data category grouping
 - Compute the individual rankings for each data category (intensive)
 - Compute the leaderboard for each data category
-- Apply a cooldown to resource intensive commands 
+- Apply a cooldown to resource-intensive commands 
 - Asynchronously perform database-related tasks and print the result
 - Intercept AlonsoLevels experience change event
 - Compute the new experience gain with respect to the global modifier

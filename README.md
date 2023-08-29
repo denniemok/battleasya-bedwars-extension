@@ -15,7 +15,7 @@
 <hr>
 
 ### Introduction
-This simple extension introduces several EULA-friendly enhancement to the 2 BedWars-related plugins (i.e., BedWars Minigame, AlonosoLevels) that were installed on BattleAsya. Since it was initially made for exclusive use on BattleAsya, most of the messages and parameters were hard-coded.<p>
+This simple extension introduces several EULA-friendly enhancement to the 2 BedWars-related plugins (i.e., BedWars Minigame, AlonosoLevels) that were installed on BattleAsya. Since the extension was initially made for exclusive use on BattleAsya, most of the messages and parameters were hard-coded (i.e., non-configurable).<p>
 
 BattleAsya had been using this extension on all its BedWars instances ever since 2021. Until today, the functionality that this plugin offers still makes up a large part of BattleAsya's VIP membership.
 

@@ -1,15 +1,15 @@
 package com.battleasya.Cmd;
 
 import com.battleasya.Util.General;
-import com.battleasya.BWUtility;
+import com.battleasya.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class Reload implements CommandExecutor {
-    private final BWUtility plugin;
+    private final BWExtension plugin;
 
-    public Reload(BWUtility plugin) {
+    public Reload(BWExtension plugin) {
         this.plugin = plugin;
     }
 

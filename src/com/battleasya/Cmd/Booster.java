@@ -1,7 +1,7 @@
 package com.battleasya.Cmd;
 
 import com.battleasya.Util.General;
-import com.battleasya.BWUtility;
+import com.battleasya.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,9 +9,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class Booster implements CommandExecutor {
 
-    private final BWUtility plugin;
+    private final BWExtension plugin;
 
-    public Booster(BWUtility plugin) {
+    public Booster(BWExtension plugin) {
         this.plugin = plugin;
     }
 

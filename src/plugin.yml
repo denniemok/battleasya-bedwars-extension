@@ -1,9 +1,9 @@
-name: BW-Utility
-main: com.battleasya.BWUtility
+name: BW-Extension
+main: com.battleasya.BWExtension
 version: 1.0.2
 author: Dennie
 website: http://battleasya.com
-description: BattleAsya BedWars Utility
+description: BattleAsya BedWars Extension
 depend: [AlonsoLevels]
 commands:
   bwstats:

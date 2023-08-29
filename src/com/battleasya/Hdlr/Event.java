@@ -2,7 +2,7 @@ package com.battleasya.Hdlr;
 
 import com.alonsoaliaga.alonsolevels.api.AlonsoLevelsAPI;
 import com.alonsoaliaga.alonsolevels.api.events.ExperienceChangeEvent;
-import com.battleasya.BWUtility;
+import com.battleasya.BWExtension;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,9 +11,9 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class Event implements Listener {
 
-    private final BWUtility plugin;
+    private final BWExtension plugin;
 
-    public Event(BWUtility plugin) {
+    public Event(BWExtension plugin) {
         this.plugin = plugin;
     }
 

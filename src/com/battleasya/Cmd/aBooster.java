@@ -1,16 +1,16 @@
 package com.battleasya.Cmd;
 
 import com.battleasya.Util.General;
-import com.battleasya.BWUtility;
+import com.battleasya.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class aBooster implements CommandExecutor {
 
-    private final BWUtility plugin;
+    private final BWExtension plugin;
 
-    public aBooster(BWUtility plugin) {
+    public aBooster(BWExtension plugin) {
         this.plugin = plugin;
     }
 

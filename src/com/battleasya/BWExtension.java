@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
 
-public class BWUtility extends JavaPlugin {
+public class BWExtension extends JavaPlugin {
 
     public MySQL ds;
 

@@ -1,7 +1,7 @@
 package com.battleasya.Ds;
 
 import com.battleasya.Util.General;
-import com.battleasya.BWUtility;
+import com.battleasya.BWExtension;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -11,9 +11,9 @@ import java.util.logging.Level;
 
 public class MySQL {
 
-    private final BWUtility plugin;
+    private final BWExtension plugin;
 
-    public MySQL(BWUtility plugin) {
+    public MySQL(BWExtension plugin) {
         this.plugin = plugin;
     }
 

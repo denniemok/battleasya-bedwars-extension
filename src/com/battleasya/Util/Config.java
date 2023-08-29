@@ -1,13 +1,13 @@
 package com.battleasya.Util;
 
-import com.battleasya.BWUtility;
+import com.battleasya.BWExtension;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class Config {
 
-    private final BWUtility plugin;
+    private final BWExtension plugin;
 
-    public Config(BWUtility plugin) {
+    public Config(BWExtension plugin) {
         this.plugin = plugin;
     }
 

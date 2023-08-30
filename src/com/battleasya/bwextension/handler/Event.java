@@ -1,8 +1,8 @@
-package com.battleasya.handler;
+package com.battleasya.bwextension.handler;
 
 import com.alonsoaliaga.alonsolevels.api.AlonsoLevelsAPI;
 import com.alonsoaliaga.alonsolevels.api.events.ExperienceChangeEvent;
-import com.battleasya.BWExtension;
+import com.battleasya.bwextension.BWExtension;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

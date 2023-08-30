@@ -1,4 +1,4 @@
-package com.battleasya.handler;
+package com.battleasya.bwextension.handler;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

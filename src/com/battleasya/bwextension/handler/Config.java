@@ -1,6 +1,6 @@
-package com.battleasya.handler;
+package com.battleasya.bwextension.handler;
 
-import com.battleasya.BWExtension;
+import com.battleasya.bwextension.BWExtension;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class Config {

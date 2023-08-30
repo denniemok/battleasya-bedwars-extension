@@ -1,12 +1,12 @@
-package com.battleasya;
+package com.battleasya.bwextension;
 
-import com.battleasya.command.Reload;
-import com.battleasya.datasource.MySQL;
-import com.battleasya.command.aBooster;
-import com.battleasya.command.Booster;
-import com.battleasya.command.Stats;
-import com.battleasya.handler.Event;
-import com.battleasya.handler.Config;
+import com.battleasya.bwextension.command.Reload;
+import com.battleasya.bwextension.command.aBooster;
+import com.battleasya.bwextension.handler.Config;
+import com.battleasya.bwextension.datasource.MySQL;
+import com.battleasya.bwextension.command.Booster;
+import com.battleasya.bwextension.command.Stats;
+import com.battleasya.bwextension.handler.Event;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;

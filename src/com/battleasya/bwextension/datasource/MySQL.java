@@ -1,7 +1,7 @@
-package com.battleasya.datasource;
+package com.battleasya.bwextension.datasource;
 
-import com.battleasya.handler.Util;
-import com.battleasya.BWExtension;
+import com.battleasya.bwextension.BWExtension;
+import com.battleasya.bwextension.handler.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;

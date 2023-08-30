@@ -1,7 +1,7 @@
-package com.battleasya.command;
+package com.battleasya.bwextension.command;
 
-import com.battleasya.handler.Util;
-import com.battleasya.BWExtension;
+import com.battleasya.bwextension.handler.Util;
+import com.battleasya.bwextension.BWExtension;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

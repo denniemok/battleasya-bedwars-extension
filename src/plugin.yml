@@ -1,5 +1,5 @@
 name: BW-Extension
-main: com.battleasya.BWExtension
+main: com.battleasya.bwextension.BWExtension
 version: 1.0.3
 author: Dennie
 website: http://battleasya.com

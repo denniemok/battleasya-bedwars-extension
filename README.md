@@ -1,15 +1,14 @@
 <br>
 <h3 align="center">BattleAsya BedWars Extension</h3>
-<p align="center">A hybrid extension to <a href="https://www.spigotmc.org/resources/51340/">BedWars Minigame</a> and <a href="https://www.spigotmc.org/resources/83380/">AlonsoLevels</a>.</p>
-
 <p align="center">
-    <a href="https://github.com/denniemok/battleasya-bedwars-extension/releases">Latest Release</a> •
-    <a href="https://github.com/denniemok/battleasya-bedwars-extension/wiki">User Guide</a> •
-    <a href="https://github.com/denniemok/battleasya-bedwars-extension/issues">Issue Tracker</a>
+    <img src="https://img.shields.io/badge/Version-1.0.3-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.3-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+    A hybrid extension to <a href="https://www.spigotmc.org/resources/51340/">BedWars Minigame</a> and <a href="https://www.spigotmc.org/resources/83380/">AlonsoLevels</a>.<br>
+    <a href="https://github.com/denniemok/battleasya-bedwars-extension/releases">Latest Release</a> •
+    <a href="https://github.com/denniemok/battleasya-bedwars-extension/wiki">User Guide</a> •
+    <a href="https://github.com/denniemok/battleasya-bedwars-extension/issues">Issue Tracker</a>
 </p>
 <br>
 

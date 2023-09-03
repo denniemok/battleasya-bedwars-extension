@@ -45,10 +45,10 @@ public class Event implements Listener {
                 return;
             }
 
-            if (plugin.expBuffer.containsKey(playerName)) {
+            if (plugin.expBuffer.contains(playerName)) {
                 plugin.expBuffer.remove(playerName);
             } else {
-                plugin.expBuffer.put(playerName, 1);
+                plugin.expBuffer.add(playerName);
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&', " &8+&3" + exp + " Extra BedWars Experience! &b(Boosted by " + plugin.activatedBy + ")"));
                 AlonsoLevelsAPI.addExperience(p.getUniqueId(), exp); // when add exp, it triggers another onExpChange event
             }

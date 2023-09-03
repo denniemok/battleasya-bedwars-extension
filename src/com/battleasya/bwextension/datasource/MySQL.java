@@ -2,12 +2,10 @@ package com.battleasya.bwextension.datasource;
 
 import com.battleasya.bwextension.BWExtension;
 import com.battleasya.bwextension.handler.Util;
-import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.sql.*;
-import java.util.logging.Level;
 
 public class MySQL {
 
@@ -29,14 +27,14 @@ public class MySQL {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + flags, username, password);
         } catch (ClassNotFoundException e) {
-            Bukkit.getLogger().log(Level.SEVERE, "[BW-Utility] Couldn't Find the MySQL Driver.");
+            plugin.getLogger().severe("[BW-Utility] Couldn't Find the MySQL Driver.");
             return false;
         } catch (SQLException e) {
-            Bukkit.getLogger().log(Level.SEVERE, "[BW-Utility] Failed to Connect to MySQL Database.");
+            plugin.getLogger().severe("[BW-Utility] Failed to Connect to MySQL Database.");
             return false;
         }
 
-        System.out.println("[BW-Utility] Connected to MySQL Database.");
+        plugin.getLogger().info("[BW-Utility] Connected to MySQL Database.");
         return true;
 
     }
@@ -50,20 +48,16 @@ public class MySQL {
         try {
             con.close();
         } catch (SQLException e) {
-            System.out.println("[BW-Utility] Failed to Disconnect from MySQL Database.");
+            plugin.getLogger().severe("[BW-Utility] Failed to Disconnect from MySQL Database.");
             return;
         }
 
         con = null;
-        System.out.println("[BW-Utility] Disconnected from MySQL Database.");
+        plugin.getLogger().info("[BW-Utility] Disconnected from MySQL Database.");
 
     }
 
     public void getLeaderboardAsync(CommandSender sender, String type) {
-
-        Util.sendMessage(sender,"");
-        Util.sendMessage(sender,"&b&nLeaderboard (Top " + type + ")");
-        Util.sendMessage(sender,"");
 
         (new BukkitRunnable() {
             @Override
@@ -75,7 +69,8 @@ public class MySQL {
                 ResultSet rs = null;
 
                 try {
-                    pst = con.prepareStatement("SELECT NAME, " + type.toUpperCase() + " FROM BedWars ORDER BY " + type.toUpperCase() + " DESC LIMIT 10");
+                    pst = con.prepareStatement("SELECT NAME, " + type.toUpperCase()
+                            + " FROM BedWars ORDER BY " + type.toUpperCase() + " DESC LIMIT 10");
                     rs = pst.executeQuery();
                     rs.beforeFirst();
                     int i = 0;
@@ -85,19 +80,31 @@ public class MySQL {
                         i++;
                     }
                 } catch (SQLException e) {
-                    System.out.println("[BW-Utility] Cannot Pass getLeaderboardAsync Task.");
+                    plugin.getLogger().severe("[BW-Utility] Cannot Pass getLeaderboardAsync Task.");
                 } finally {
                     close(pst);
                     close(rs);
                 }
 
-                for (int i = 0; i < 10; i++) {
-                    if (leaderboard[i][0] != null) {
-                        Util.sendMessage(sender, "&e" + (i + 1) + ". &f" + leaderboard[i][0] + " &7(" + leaderboard[i][1] + ")");
-                    }
-                }
+                (new BukkitRunnable() {
+                    @Override
+                    public void run() {
 
-                Util.sendMessage(sender,"");
+                        Util.sendMessage(sender, "");
+                        Util.sendMessage(sender, "&b&nLeaderboard (Top " + type + ")");
+                        Util.sendMessage(sender, "");
+
+                        for (int i = 0; i < 10; i++) {
+                            if (leaderboard[i][0] != null) {
+                                Util.sendMessage(sender, "&e" + (i + 1)
+                                        + ". &f" + leaderboard[i][0] + " &7(" + leaderboard[i][1] + ")");
+                            }
+                        }
+
+                        Util.sendMessage(sender, "");
+
+                    }
+                }).runTask(plugin);
 
             }
         }).runTaskAsynchronously(plugin);
@@ -105,10 +112,6 @@ public class MySQL {
     }
 
     public void getStatsAsync(CommandSender sender, String playerName) {
-
-        Util.sendMessage(sender,"");
-        Util.sendMessage(sender,"&b&n" + playerName + "'s Stats");
-        Util.sendMessage(sender,"");
 
         (new BukkitRunnable() {
             @Override
@@ -140,7 +143,7 @@ public class MySQL {
 
                 } catch (SQLException e) {
 
-                    System.out.println("[BW-Utility] Cannot Pass getStatsAsync Task.");
+                    plugin.getLogger().severe("[BW-Utility] Cannot Pass getStatsAsync Task.");
 
                 } finally {
 
@@ -149,15 +152,27 @@ public class MySQL {
 
                 }
 
-                Util.sendMessage(sender,"&eKills: &f" + stats[0]);
-                Util.sendMessage(sender,"&eDeaths: &f" + stats[1]);
-                Util.sendMessage(sender,"&eKDR: &f" + stats[2]);
-                Util.sendMessage(sender,"&eWins: &f" + stats[3]);
-                Util.sendMessage(sender,"&eLoses: &f" + stats[4]);
-                Util.sendMessage(sender,"&eFinal Kills: &f" + stats[5]);
-                Util.sendMessage(sender,"&eFinal Deaths: &f" + stats[6]);
-                Util.sendMessage(sender,"&eBeds Destroyed: &f" + stats[7]);
-                Util.sendMessage(sender,"");
+                (new BukkitRunnable() {
+                    @Override
+                    public void run() {
+
+                        Util.sendMessage(sender,"");
+                        Util.sendMessage(sender,"&b&n" + playerName + "'s Stats");
+                        Util.sendMessage(sender,"");
+
+                        Util.sendMessage(sender, "&eKills: &f" + stats[0]);
+                        Util.sendMessage(sender, "&eDeaths: &f" + stats[1]);
+                        Util.sendMessage(sender, "&eKDR: &f" + stats[2]);
+                        Util.sendMessage(sender, "&eWins: &f" + stats[3]);
+                        Util.sendMessage(sender, "&eLoses: &f" + stats[4]);
+                        Util.sendMessage(sender, "&eFinal Kills: &f" + stats[5]);
+                        Util.sendMessage(sender, "&eFinal Deaths: &f" + stats[6]);
+                        Util.sendMessage(sender, "&eBeds Destroyed: &f" + stats[7]);
+
+                        Util.sendMessage(sender, "");
+
+                    }
+                }).runTask(plugin);
 
             }
         }).runTaskAsynchronously(plugin);
@@ -165,10 +180,6 @@ public class MySQL {
     }
 
     public void getRankingsAsync(CommandSender sender, String playerName) {
-
-        Util.sendMessage(sender,"");
-        Util.sendMessage(sender,"&b&n" + playerName + "'s Rankings");
-        Util.sendMessage(sender,"");
 
         (new BukkitRunnable() {
             @Override
@@ -212,7 +223,7 @@ public class MySQL {
 
                 } catch (SQLException e) {
 
-                    System.out.println("[BW-Utility] Cannot Pass getRankingsAsync Task.");
+                    plugin.getLogger().severe("[BW-Utility] Cannot Pass getRankingsAsync Task.");
 
                 } finally {
 
@@ -221,14 +232,26 @@ public class MySQL {
 
                 }
 
-                Util.sendMessage(sender,"&eKills: &f#" + rank[0]);
-                Util.sendMessage(sender,"&eDeaths: &f#" + rank[1]);
-                Util.sendMessage(sender,"&eWins: &f#" + rank[2]);
-                Util.sendMessage(sender,"&eLoses: &f#" + rank[3]);
-                Util.sendMessage(sender,"&eFinal Kills: &f#" + rank[4]);
-                Util.sendMessage(sender,"&eFinal Deaths: &f#" + rank[5]);
-                Util.sendMessage(sender,"&eBeds Destroyed: &f#" + rank[6]);
-                Util.sendMessage(sender,"");
+                (new BukkitRunnable() {
+                    @Override
+                    public void run() {
+
+                        Util.sendMessage(sender, "");
+                        Util.sendMessage(sender, "&b&n" + playerName + "'s Rankings");
+                        Util.sendMessage(sender, "");
+
+                        Util.sendMessage(sender, "&eKills: &f#" + rank[0]);
+                        Util.sendMessage(sender, "&eDeaths: &f#" + rank[1]);
+                        Util.sendMessage(sender, "&eWins: &f#" + rank[2]);
+                        Util.sendMessage(sender, "&eLoses: &f#" + rank[3]);
+                        Util.sendMessage(sender, "&eFinal Kills: &f#" + rank[4]);
+                        Util.sendMessage(sender, "&eFinal Deaths: &f#" + rank[5]);
+                        Util.sendMessage(sender, "&eBeds Destroyed: &f#" + rank[6]);
+
+                        Util.sendMessage(sender, "");
+
+                    }
+                }).runTask(plugin);
 
             }
         }).runTaskAsynchronously(plugin);
@@ -241,7 +264,7 @@ public class MySQL {
             try {
                 st.close();
             } catch (SQLException e) {
-                System.out.println("[BW-Utility] Failed to Close Statement.");
+                plugin.getLogger().severe("[BW-Utility] Failed to Close Statement.");
             }
         }
 
@@ -253,7 +276,7 @@ public class MySQL {
             try {
                 rs.close();
             } catch (SQLException e) {
-                System.out.println("[BW-Utility] Failed to Close ResultSet.");
+                plugin.getLogger().severe("[BW-Utility] Failed to Close ResultSet.");
             }
         }
 

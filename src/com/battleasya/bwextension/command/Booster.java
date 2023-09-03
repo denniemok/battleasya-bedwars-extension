@@ -47,7 +47,7 @@ public class Booster implements CommandExecutor {
                     return true;
                 }
 
-                if (plugin.consumedList.containsKey(sender.getName())) {
+                if (plugin.consumedList.contains(sender.getName())) {
                     Util.sendMessage(sender, "&8[&3Booster&8] &cYou can only do so once per day!");
                     return true;
                 }
@@ -84,14 +84,14 @@ public class Booster implements CommandExecutor {
         plugin.timeStamp = System.currentTimeMillis();
 
         if (consumption) {
-            plugin.consumedList.put(sender.getName(), 1);
+            plugin.consumedList.add(sender.getName());
         }
 
         (new BukkitRunnable() {
             public void run() {
                 plugin.boosterInAction = false;
             }
-        }).runTaskLater(plugin, 20L * 3600);
+        }).runTaskLaterAsynchronously(plugin, 20L * 3600);
 
         Util.sendMessage(sender, "&8[&3Booster&8] &aBooster Activated [1 Hour].");
 

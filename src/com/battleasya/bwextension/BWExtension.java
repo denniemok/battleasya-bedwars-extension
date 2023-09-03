@@ -10,6 +10,7 @@ import com.battleasya.bwextension.handler.Event;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class BWExtension extends JavaPlugin {
 
@@ -25,9 +26,9 @@ public class BWExtension extends JavaPlugin {
 
     public long timeStamp;
 
-    public HashMap<String, Integer> expBuffer;
+    public HashSet<String> expBuffer;
 
-    public HashMap<String, Integer> consumedList;
+    public HashSet<String> consumedList;
 
     public HashMap<String, Long> cmdCDList;
 
@@ -37,7 +38,8 @@ public class BWExtension extends JavaPlugin {
         saveDefaultConfig();
 
         config = new Config(this);
-        config.fetchConfig();
+
+        getConfiguration().fetchConfig();
 
         getCommand("bwstats").setExecutor(new Stats(this));
         getCommand("booster").setExecutor(new Booster(this));
@@ -47,11 +49,14 @@ public class BWExtension extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Event(this), this);
 
         ds = new MySQL(this);
-        boolean connectMySQL = ds.connect(config.host, config.port
-                , config.database, config.username, config.password, config.flags);
+
+        boolean connectMySQL = getDataSource().connect(getConfiguration().host
+                , getConfiguration().port, getConfiguration().database
+                , getConfiguration().username, getConfiguration().password
+                , getConfiguration().flags);
 
         if (!connectMySQL) {
-            ds.disconnect();
+            getDataSource().disconnect();
             getServer().getPluginManager().disablePlugin(this);
         }
 
@@ -60,15 +65,23 @@ public class BWExtension extends JavaPlugin {
         activatedBy = "";
         timeStamp = 0;
 
-        expBuffer = new HashMap<>();
-        consumedList = new HashMap<>();
+        expBuffer = new HashSet<>();
+        consumedList = new HashSet<>();
         cmdCDList = new HashMap<>();
 
     }
 
     @Override
     public void onDisable() {
-        ds.disconnect();
+        getDataSource().disconnect();
+    }
+
+    public Config getConfiguration() {
+        return config;
+    }
+
+    public MySQL getDataSource() {
+        return ds;
     }
 
 }

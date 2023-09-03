@@ -120,19 +120,19 @@ public class Stats implements CommandExecutor {
 
     public void printLeaderboard(CommandSender sender, String type) {
         if (notInCooldown(sender)) {
-            plugin.ds.getLeaderboardAsync(sender, type);
+            plugin.getDataSource().getLeaderboardAsync(sender, type);
         }
     }
 
     public void printStats(CommandSender sender, String playerName) {
         if (notInCooldown(sender)) {
-            plugin.ds.getStatsAsync(sender, playerName);
+            plugin.getDataSource().getStatsAsync(sender, playerName);
         }
     }
 
     public void printRankings(CommandSender sender, String playerName) {
         if (notInCooldown(sender)) {
-            plugin.ds.getRankingsAsync(sender, playerName);
+            plugin.getDataSource().getRankingsAsync(sender, playerName);
         }
     }
 

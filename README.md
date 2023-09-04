@@ -1,7 +1,7 @@
 <br>
 <h3 align="center">BattleAsya BedWars Extension</h3>
 <p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0.3-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+    <img src="https://img.shields.io/badge/Version-1.0.4-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
 </p>
 
 <p align="center">
